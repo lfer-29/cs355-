@@ -13,3 +13,10 @@ color: blue;
 position: relative;
 top: 30px;
 }
+
+.moving-text {
+border: 1px solid black;
+width: 400px;
+height: 100px;
+animation: mymove 5s infinite;
+}
