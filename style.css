@@ -19,7 +19,6 @@ width: 200px;
 height: 100px;
 animation: mymove 5s infinite;
 }
-
 @keyframes mymove {
   50% {font: 20px bold;}
 }
@@ -28,7 +27,7 @@ position: relative;
 text-align: center;
 color: white;
 }
-.centered {
+.centered-text {
 position: absolute;
 top: 50%;
 left: 50%;
