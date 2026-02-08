@@ -51,7 +51,7 @@ top:25%;
 .flex-box {
 display: flex;
 
-background-color: DodgerBlue;
+background-color: rgb(159, 203, 247);
 }
 
 .flex-box div {
