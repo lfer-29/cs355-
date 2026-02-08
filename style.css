@@ -1,6 +1,6 @@
 
 :root {
-    background-image: linear-gradient(to bottom, #3F51B5, #03A9F4);
+    --bg-color: white;
 }
 
 :root[theme='dark'] {
