@@ -1,6 +1,14 @@
 
-body {
+:root {
     background-image: linear-gradient(to bottom, #3F51B5, #03A9F4);
+}
+
+:root[theme='dark'] {
+    --bg-color: #333;
+}
+
+body {
+    background-color: var(--bg-color);
 }
 
 .basic-box {
@@ -39,3 +47,6 @@ position: absolute;
 left:62%;
 top:25%;
 }
+
+
+
