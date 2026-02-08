@@ -12,8 +12,17 @@
                     <h1>Complete the form!</h1>
                     </div>
                 </div>
+            </div> 
+            <br><br>
+            <div class="flex-box">
+                <div><p align:'center'>Dessert:</p></div>
+                <div><p id="dessert"></p></div>
+                
             </div>
-            <button onclick="toggleDarkMode()">Dark mode</button>
+            <div class="flex-box">
+                <div><p align:'center'>IceCream:</p></div>
+                <div><p id="icecream"></p></div>
+            </div>
             <script>
             function setRootTheme(){
             const root=document.documentElement;
@@ -31,7 +40,16 @@
             localStorage.setItem('theme','dark');
             setRootTheme();
             }
+            const myKeysValues = window.location.search;
+            const urlParams = new URLSearchParams(myKeysValues);
+            const param1 = urlParams.get('ice_cream');
+            const param2 = urlParams.get('dessert');
+            document.getElementById("dessert").innerHTML = `${param2}`;
+            document.getElementById("icecream").innerHTML = `${param1}`;
             </script>
+            <br>
+            <button onclick="toggleDarkMode()">Dark mode</button>
+            
         </div>
         </center>
     </body>
