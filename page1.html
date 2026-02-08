@@ -38,15 +38,28 @@
                 <input type="submit" value="Submit" align="center">
                 <input type="reset" value="Reset" align="center">
             </form>
-            <button id="button1">Dark Mode(pls work)</button>
-            <button onclick="showMessage()">Click Me</button>
+            <button onclick="toggleDarkMode()">Dark mode</button>
             <script>
-            function showMessage() {
-alert("Button was clicked!");
-}
-        </script>
+            
+            function setRootTheme(){
+            const root=document.documentElement;
+            if(localStorage.getItem('theme')=='dark')
+            root.setAttribute('theme','dark');
+            else
+            root.removeAttribute('theme');
+            }
+            window.addEventListener('load',setRootTheme);
+            
+            function toggleDarkMode(){
+            if(localStorage.getItem('theme')=='dark')
+            localStorage.removeItem('theme');
+            else
+            localStorage.setItem('theme','dark');
+            setRootTheme();
+            }
+            </script>
         </div>
         </center>
-        <script scr="script.js"></script>
+        <script scr="script.js"type="text/JavaScript"></script>
     </body>
 </html>

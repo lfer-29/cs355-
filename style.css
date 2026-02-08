@@ -14,10 +14,10 @@ body {
 .basic-box {
 width: 1200px;
 height: 500px;
-border: 10px solid lightblue;
-background-color: white;
+border: 10px solid grey;
+background-color: lightgray;
 padding: 10px;
-color: blue;
+color: black;
 position: relative;
 top: 30px;
 }

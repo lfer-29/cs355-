@@ -16,8 +16,3 @@ window.addEventListener('load',setRootTheme);
 
 const $ = document.querySelector.bind(document);
 $('#button1').addEventListener('click', toggleDarkMode);
-
-
-function showMessage() {
-alert("Button was clicked!");
-}
