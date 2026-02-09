@@ -20,3 +20,5 @@ fetch(API_URL, {
 })
 .then(r=>r.json())
 .then(getRecipe);
+
+console.log("Hi!")
