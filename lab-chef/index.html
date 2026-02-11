@@ -8,12 +8,12 @@
     <div class="container">
         <h1>👨‍🍳 Chef Bot</h1>
         <input type="text" id="api-key-input"
-               placeholder="AIzaSyDQFXVQQv5LGzvKmAftw-MaQ5jD9u2Td1Y" class="box1">
+               value="AIzaSyDQFXVQQv5LGzvKmAftw-MaQ5jD9u2Td1Y" class="box1">
         <p>Enter the ingredients you have, and I'll find a recipe!</p>
         <input type="text" id="ingredients-input"
                placeholder="e.g. eggs, spinach, feta" class="box">
         <br><br>
-        <button onclick="getRecipe()" class="semi-transparent-button">Generate Recipe</button>
+        <button onclick="getRecipe()" class="semi-transparent-button" id="get-recipe-btn">Generate Recipe</button>
         <div id="recipe-display"></div>
     </div>
     </center>
