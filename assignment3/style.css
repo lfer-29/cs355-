@@ -1,13 +1,13 @@
 body {
-background-color: #ffffff;
+background-image: url("paw-print-background.jpg");
 font-family: "Lucida Console", monospace;
 }
 
 .container {
-width: 1200px;
+width: 800px;
 height: auto;
-border: 10px solid grey;
-background-color: lightgray;
+border: 10px solid rgb(168, 117, 81);
+background-color: rgb(229, 185, 138);
 padding: 10px;
 color: black;
 position: relative;
@@ -49,4 +49,15 @@ display: inline-block;
 border: 1px solid #ccc;
 border-radius: 4px;
 box-sizing: border-box;
+}
+
+.error {
+color: red;
+margin-top: 15px;
+}
+
+img {
+aspect-ratio: 16 / 9;
+width: 35%;
+object-fit: cover;
 }
