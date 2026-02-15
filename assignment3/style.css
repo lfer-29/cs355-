@@ -1,3 +1,52 @@
 body {
-    background-color: aqua;
+background-color: #ffffff;
+font-family: "Lucida Console", monospace;
+}
+
+.container {
+width: 1200px;
+height: auto;
+border: 10px solid grey;
+background-color: lightgray;
+padding: 10px;
+color: black;
+position: relative;
+top: 30px;
+}
+
+.semi-transparent-button { 
+display: block; 
+box-sizing: border-box; 
+margin: 0 auto; 
+padding: 8px; 
+width: 80%; 
+max-width: 150px; 
+background: #fff; /* fallback color for old browsers */
+background: rgba(255, 255, 255, 0.5); 
+border-radius: 10px; 
+color: black; 
+text-align: center; 
+text-decoration: none; 
+letter-spacing: 1px; 
+transition: all 0.3s ease-out; 
+}
+
+.box {
+width: 40%;
+padding: 12px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+.box1{
+width: 25%;
+padding: 12px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
 }
