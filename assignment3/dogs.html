@@ -7,10 +7,31 @@
         <div class="container">
         <h1>🐾Paw Search🐾</h1>
         <br><br>
-        <input type="text" id="input"
-               placeholder="type in a dog breed!" class="box1">
+        <input list="breed" placeholder="type in a dog breed!" class="box1"> 
+        <datalist id="breed">
+            <option>German Shepherd</option>
+            <option>Labrador Retriever</option>
+            <option>French Bulldog</option>
+            <option>Pug</option>
+            <option>Poodle</option>
+            <option>Rottweiler</option>
+            <option>Chihuahua</option>
+            <option>Golden Retriever</option>
+            <option>Yorkshire Terrier</option>
+            <option>Bulldog</option>
+            <option>Dachshund</option>
+            <option>Beagle</option>
+            <option>Doberman Pinscher</option>
+            <option>Boxer</option>
+            <option>Great Dane</option>
+            <option>Dalmatian</option>
+            <option>Pomeranian</option>
+            <option>Siberian Husky</option>
+            <option>Border Collie</option>
+        </datalist>
+
         <br><br>
-        <button class="semi-transparent-button" id="show-images-btn">Show Images</button>
+        <button onclick="showDog()" class="semi-transparent-button" id="show-images-btn">Show Images</button>
         <br><br>
         </div>
         </center>
