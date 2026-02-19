@@ -7,7 +7,7 @@
         <p>Total visits: <span id="count">0</span></p>
 
         <script>
-        fetch('/hits/cs355-/lab4_express/public/page2')
+        fetch('/hits/page2')
         .then(res => res.json())
         .then(data => {
             document.getElementById('count').textContent = data.count;
