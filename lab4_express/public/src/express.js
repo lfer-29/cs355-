@@ -3,12 +3,11 @@ const app = express();
 
 app.use(express .static('public'));
 const hits = {
-    index: 0,
+    home: 0,
     page1: 0,
     page2: 0,
 };  
 app.use(express.static('public'));
-
 app.get('/hits/:page', (req,res)=>{
   const page = req.params.page;
   hits[page]++;
