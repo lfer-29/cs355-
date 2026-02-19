@@ -3,7 +3,7 @@ const app = express();
 
 app.use(express .static('public'));
 const hits = {
-    home: 0,
+    index: 0,
     page1: 0,
     page2: 0,
 };  

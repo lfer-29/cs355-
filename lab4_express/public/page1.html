@@ -4,6 +4,14 @@
         <a href="index.html">Back to Home!</a>
         <br><br>
         <a href="page2.html">Page 2</a>
-        <script src="script.js"></script>        
+        <p>Total visits: <span id="count">0</span></p>
+
+        <script>
+        fetch('/hits/page1')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('count').textContent = data.count;
+            });  
+        </script>     
     </body>
 </html>
