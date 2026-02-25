@@ -1,50 +1,42 @@
-const breedInput = document.getElementById("breedInput");
-    const breedList = document.getElementById("breedList");
-    const showBtn = document.getElementById("showBtn");
-    const dogImage = document.getElementById("dogImage");
-    const message = document.getElementById("message");
+const breedInput = document.getElementById('breed-input');
+const breedsList = document.getElementById('breeds');
+const showBtn = document.getElementById('show-btn');
+const img = document.getElementById('dog-img');
+const error = document.getElementById('error');
 
-    let imageInterval = null;
-    let breeds = [];
+let intervalId = null;
 
-    // Load all breeds for autocomplete
-    fetch("https://dog.ceo/api/breeds/list/all")
-      .then(res => res.json())
-      .then(data => {
-        breeds = Object.keys(data.message);
-        breeds.forEach(breed => {
-          const option = document.createElement("option");
-          option.value = breed;
-          breedList.appendChild(option);
-        });
-      });
-
-    function loadRandomImage(breed) {
-      fetch(`https://dog.ceo/api/breed/${breed}/images/random`)
-        .then(res => res.json())
-        .then(data => {
-          dogImage.src = data.message;
-        });
-    }
-
-    showBtn.addEventListener("click", () => {
-      const breed = breedInput.value.toLowerCase().trim();
-
-      // Stop previous image loop
-      if (imageInterval) {
-        clearInterval(imageInterval);
-      }
-
-      if (!breeds.includes(breed)) {
-        message.textContent = "No such breed";
-        dogImage.src = "";
-        return;
-      }
-
-      message.textContent = "";
-      loadRandomImage(breed);
-
-      imageInterval = setInterval(() => {
-        loadRandomImage(breed);
-      }, 5000);
+/* Load breeds from local API */
+fetch('/breeds')
+  .then(res => res.json())
+  .then(breeds => {
+    breeds.forEach(breed => {
+      const option = document.createElement('option');
+      option.value = breed;
+      breedsList.appendChild(option);
     });
+  });
+
+showBtn.addEventListener('click', () => {
+  const breed = breedInput.value.toLowerCase();
+
+  if (intervalId) clearInterval(intervalId);
+
+  fetchImage(breed);
+  intervalId = setInterval(() => fetchImage(breed), 5000);
+});
+
+function fetchImage(breed) {
+  fetch(`/image/${breed}`)
+    .then(res => res.json())
+    .then(data => {
+      if (data.error) {
+        error.textContent = 'No such breed';
+        img.src = '';
+        clearInterval(intervalId);
+      } else {
+        error.textContent = '';
+        img.src = data.message;
+      }
+    });
+}
